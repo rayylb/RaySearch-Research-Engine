@@ -91,8 +91,7 @@ python interface_graphique_dictionnaire_inversé.py
 
 ## Author
 
-Philippe Mulhem (Original framework)
-Rayane LABZIZI
+Rayane LABZIZI and Philippe Mulhem (Original framework)
 
 ## License
 
