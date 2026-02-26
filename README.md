@@ -1,5 +1,5 @@
+![logo](logo.png "Logo")
 # RaySearch Search Engine
-
 A simple information retrieval system that indexes and searches through the CACM (Communications of the ACM) document collection using TF-IDF and cosine similarity, with a simple GUI to make it user-friendly on the file interface_graphique_recherche.py
 
 ## Features
