@@ -4,10 +4,11 @@ from tkinter import ttk
 
 import matplotlib.pyplot as plt
 import numpy as np
+from data_to_modify import folder
 
 
 
-CHEMIN_CACM = "/home/ray/Documents/TP_semester_8/Acces_et_Recherche_informations/TP1/cacm/"
+CHEMIN_CACM = folder+"cacm/"
 
 resultglob = []
 
@@ -81,7 +82,7 @@ if __name__ == "__main__":
     fenetre.title("RaySearch - Moteur de Recherche")
     fenetre.geometry("1400x1400")
 
-    photo = tk.PhotoImage(file="/home/ray/Documents/TP_semester_8/Acces_et_Recherche_informations/TP1/logo.png")
+    photo = tk.PhotoImage(file=folder+"logo.png")
     lbl = tk.Label(fenetre,image=photo)
     lbl.pack()
 

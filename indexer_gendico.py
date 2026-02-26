@@ -19,11 +19,12 @@ import operator
 from operator import itemgetter
 import math
 import json
+from data_to_modify import folder
 
 #constantes
-DOSSIERDOCUMENTS = "/home/ray/Documents/TP_semester_8/Acces_et_Recherche_informations/TP1/cacm/" # repertoire qui contien la collectionA MODIFIER
-FICHMOTSOUTILS = "/home/ray/Documents/TP_semester_8/Acces_et_Recherche_informations/TP1/fetch.txt" # fichier des mots outils A MODIFIER
-FICHVOC = "/home/ray/Documents/TP_semester_8/Acces_et_Recherche_informations/TP1/Voc.json" # fichier json de sauvegarde du vocabulaire A MODIFIER
+DOSSIERDOCUMENTS = folder+"cacm/" # repertoire qui contien la collectionA MODIFIER
+FICHMOTSOUTILS = folder+"fetch.txt" # fichier des mots outils A MODIFIER
+FICHVOC = folder+"Voc.json" # fichier json de sauvegarde du vocabulaire A MODIFIER
 NBDOCS = len(os.listdir(DOSSIERDOCUMENTS)) # nombre de docs total
 MOTSOUTILS= {}  # le dictionnaire python des mots outils
 voc = {} # le dictionnaire python du vocabulaire, avec les idf

@@ -3,11 +3,11 @@ from indexer_gendico import *
 import tkinter as tk
 from tkinter import ttk
 import json
+from data_to_modify import folder
 
-
-INDEXINVERSEE = "/home/ray/Documents/TP_semester_8/Acces_et_Recherche_informations/TP1/Index_Inversee.json"
-DICONORMES = "/home/ray/Documents/TP_semester_8/Acces_et_Recherche_informations/TP1/dictionnaire_normes.json"
-CHEMIN_CACM = "/home/ray/Documents/TP_semester_8/Acces_et_Recherche_informations/TP1/cacm/"
+INDEXINVERSEE = folder+"Index_Inversee.json"
+DICONORMES = folder+"dictionnaire_normes.json"
+CHEMIN_CACM = folder+"cacm/"
 
 with open(INDEXINVERSEE, 'r') as fp:
     II = json.load(fp)

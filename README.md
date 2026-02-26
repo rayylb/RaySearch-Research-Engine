@@ -14,6 +14,7 @@ A simple information retrieval system that indexes and searches through the CACM
 ## Project Structure
 
 ```
+├── data_to_modify.py                     # File path, you have to update it to match your local setup
 ├── indexer_gendico.py                    # Vocabulary generation
 ├── indexer_genindex.py                   # Inverted index generation
 ├── recherche.py                          # Search engine core
@@ -39,12 +40,7 @@ pip install nltk matplotlib
 
 ## Setup
 
-1. **Configure paths**: Update the file paths in the Python scripts to match your local setup:
-   - `DOSSIERDOCUMENTS`: Path to the CACM document collection
-   - `FICHMOTSOUTILS`: Path to the stop words file
-   - `FICHVOC`: Path to save the vocabulary
-   - `INDEXINVERSEE`: Path to save the inverted index
-   - `DICONORMES`: Path to save document norms
+1. **Configure paths**: Update the file paths in the Python scripts to match your local setup on the data_to_modify.py path.
 
 2. **Generate the vocabulary**:
    ```bash

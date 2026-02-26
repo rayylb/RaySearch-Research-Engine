@@ -11,13 +11,15 @@ import operator
 from operator import itemgetter
 import math
 import json
+from data_to_modify import folder
+
 
 #constantes
-DOSSIERDOCUMENTS = "/home/ray/Documents/TP_semester_8/Acces_et_Recherche_informations/TP1/cacm/" # repertoire qui contien la collectionA MODIFIER
-FICHMOTSOUTILS = "/home/ray/Documents/TP_semester_8/Acces_et_Recherche_informations/TP1/fetch.txt" # fichier des mots outils A MODIFIER
-FICHVOC = "/home/ray/Documents/TP_semester_8/Acces_et_Recherche_informations/TP1/Voc.json" # fichier json de sauvegarde du vocabulaire A MODIFIER
-INDEXINVERSEE = "/home/ray/Documents/TP_semester_8/Acces_et_Recherche_informations/TP1/Index_Inversee.json"
-DICONORMES = "/home/ray/Documents/TP_semester_8/Acces_et_Recherche_informations/TP1/dictionnaire_normes.json"
+DOSSIERDOCUMENTS = folder+"cacm/" # repertoire qui contien la collectionA MODIFIER
+FICHMOTSOUTILS = folder+"fetch.txt" # fichier des mots outils A MODIFIER
+FICHVOC = folder+"Voc.json" # fichier json de sauvegarde du vocabulaire A MODIFIER
+INDEXINVERSEE = folder+"Index_Inversee.json"
+DICONORMES = folder+"dictionnaire_normes.json"
 
 def chargeDictionnaire(fstopname):
     """

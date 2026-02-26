@@ -1,0 +1,1 @@
+folder = "/home/ray/Documents/RaySearch-Research-Engine/"
