@@ -18,7 +18,7 @@ def rechercher():
         tableau.delete(item)
     result = dic_produit_scalaire(traiement_requetes(r))
     resultat_triees = sorted(result.items(), key=lambda t: t[1], reverse=True) #tri du dictionnaire, retourne une liste de tuples
-    lbl_resultat_norme.config(text=f"Nombre de résultats: {len(resultat_triees)}", fg="blue")
+    lbl_resultat_norme.config(text=f"Number of results: {len(resultat_triees)}", fg="blue")
     for document in resultat_triees:
         titre = ""
         chemin_complet = CHEMIN_CACM + document[0]
@@ -46,7 +46,7 @@ def afficher_contenu_fichier(event):
     chemin_complet = CHEMIN_CACM + nom_doc
     
     top = tk.Toplevel(fenetre)
-    top.title(f"Contenu de {nom_doc}")
+    top.title(f"Content of {nom_doc}")
     top.geometry("600x400")
     
     zone_texte = tk.Text(top, wrap='word')
@@ -79,7 +79,7 @@ def precision():
 
 if __name__ == "__main__":
     fenetre = tk.Tk()
-    fenetre.title("RaySearch - Moteur de Recherche")
+    fenetre.title("RaySearch - Research Engine")
     fenetre.geometry("1400x1400")
 
     photo = tk.PhotoImage(file=folder+"logo.png")
@@ -92,28 +92,28 @@ if __name__ == "__main__":
     champ_saisie = tk.Entry(frame_haut, width=50, font=('Arial 20 italic'))
     champ_saisie.pack(side=tk.LEFT, padx=5)
 
-    bouton = tk.Button(frame_haut, text="Rechercher", command=rechercher, height = 2, width = 20)
+    bouton = tk.Button(frame_haut, text="Research", command=rechercher, height = 2, width = 20)
     bouton.pack(side=tk.LEFT)
 
-    colonnes = ("Document", "Titre", "Pertinance")
+    colonnes = ("Document", "Title", "Relevance")
     tableau = ttk.Treeview(fenetre, columns=colonnes, show='headings')
 
     tableau.heading("Document", text="Document")
-    tableau.heading("Titre", text="Titre")
-    tableau.heading("Pertinance", text="Pertinance")
+    tableau.heading("Title", text="Title")
+    tableau.heading("Relevance", text="Relevance")
 
     tableau.column("Document", width=20)
-    tableau.column("Titre", width=400)
-    tableau.column("Pertinance", width=20)
+    tableau.column("Title", width=400)
+    tableau.column("Relevance", width=20)
     tableau.bind("<Double-1>", afficher_contenu_fichier)
 
     tableau.pack(expand=True, fill='both', padx=10, pady=10)
 
     frame_bas = tk.Frame(fenetre)
     frame_bas.pack(pady=10) 
-    lbl_resultat_norme = tk.Label(frame_bas, text="Nombre de résultats: N/A", font='Arial 12 ')
+    lbl_resultat_norme = tk.Label(frame_bas, text="Number of results: N/A", font='Arial 12 ')
     lbl_resultat_norme.pack(side=tk.LEFT)
-    boutonp = tk.Button(frame_bas, text="Précision", command=precision)
+    boutonp = tk.Button(frame_bas, text="Precision", command=precision)
     boutonp.pack(side=tk.RIGHT)
 
 

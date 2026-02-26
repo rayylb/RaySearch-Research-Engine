@@ -37,7 +37,7 @@ diconorme = chargeDictionnaire(DICONORMES) #chargmeent des normes
 chargeMotsOutils(FICHMOTSOUTILS) #chargement des mots outils
 
 def traiement_requetes(q):
-    print ("Traitement de la requête ",q)
+    print ("Request treatment: ",q)
     qt = stringtokenize(q)
     qtclean = filtreMotsOutils(qt)
     vecteur = {}
@@ -82,6 +82,6 @@ def traiter_resultat_recherche(resultat):
 if __name__ == "__main__":
     requete = ""
     while True:
-        requete = input("Saisissez une requête: ")
+        requete = input("Type your request: ")
         resultat_traitement_requete = traiement_requetes(requete)
         traiter_resultat_recherche(dic_produit_scalaire(resultat_traitement_requete))
